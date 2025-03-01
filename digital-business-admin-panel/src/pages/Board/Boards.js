@@ -14,14 +14,10 @@ import "./Board.css";
 const Boards = () => {
   const [modalOpened, setModalOpened] = useState(false);
   const { board, setBoard } = useBoard();
-  console.log("Board Data:", board); // Debugging: Check if board has data
-
 
   const onDragEnd = (event) => {
     const { active, over } = event;
     if (!over) return;
-    console.log("Dragged Item ID:", active.id);
-    console.log("Dropped Over ID:", over?.id);
 
     const sourceColumn = board.columns.find((col) =>
       col.cards.some((card) => card.id === active.id)

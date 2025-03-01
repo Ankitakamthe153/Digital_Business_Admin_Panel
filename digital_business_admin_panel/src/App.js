@@ -9,7 +9,7 @@ import DataGrid from "./pages/DataGrid/DataGrid";
 function App() {
   return (
     <div id="dashboard">
-      <BrowserRouter basename= "/Digital_Business_Admin_Panel">
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route path="Dashboard" element={<Dashboard />}></Route>

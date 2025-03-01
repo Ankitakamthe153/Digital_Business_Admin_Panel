@@ -3,7 +3,7 @@ import { boardData } from "../data/data";
 
 const useBoard = create((set) => ({
   board: boardData,
-  setBoard: (board) => set(() => ({ board })),
+  setBoard: (board) => set((state) => ({ board })),
 }));
 
 export default useBoard;
